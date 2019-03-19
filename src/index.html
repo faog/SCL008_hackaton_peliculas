@@ -2,13 +2,40 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- para el icono <link rel="shortcut icon" href="Image/worldbank.jpg" type="image/x-icon"/>-->
     <title>Onda Retro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root" class="container-fluid"></div>
+    <!--Encabezado de la página. Logo, barra de navegador-->
+    <header>
+      <nav class="nav-wrapper">        
+        <a href="#" class="brand-logo">
+          <img src="Image/logobancomundial.png" id="logo" alt="Logo Onda Retro" />
+        </a>
+      <h3>"slogan de 'Onda Retro'"</h3> 
+        <a  data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down"> 
+          <li><a class="abouthow" href="#">¿Qué es Onda Retro?</a></li>
+          <li><a class="movieshow" href="#">Iniciar busqueda</a></li>
+        </ul>     
+      </nav>
+    
+          <!--nav responsivo-->
+        <ul class="sidenav" id="mobile-demo" >        
+            <li><a class="abouthow" href="#">¿Qué es Onda Retro?</a></li>
+            <li><a class="movieshow" href="#">Iniciar busqueda</a></li>
+        </ul>
+    </header>
+  <p>holas</p>
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
