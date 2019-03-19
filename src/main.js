@@ -41,4 +41,6 @@ function indexView(){
                 </div>
             </div>
         </section> 
-    </section>   
+    </section>
+    `
+};
