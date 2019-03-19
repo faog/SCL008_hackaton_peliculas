@@ -1,6 +1,6 @@
 /*global $*/
 
-/*FUNCIONES*/
+/*I. FUNCIONES*/
 
 /*1. Función indexView() que permite imprimir el contenido dinámico de la página de inicio*/
 function indexView(){
@@ -70,13 +70,23 @@ function aboutView(){
         <h4>Página en construcción</h4>
     </section>             
     `  
-
 }
 
+/*3. Función searchView() que permite imprimir el contenido dinámico de la página Iniciar Búsqueda*/
+function searchView(){
+    document.getElementById('dinamicpage').innerHTML = '';
+    document.getElementById('dinamicpage').innerHTML += 
 
+    `
+    <section id="searchview" class="row"> 
+        <h3>Iniciar Búsqueda</h3>     
+        <h4>Página en construcción</h4>
+    </section>             
+    `  
+}
 
+/*II.MANEJO DEL DOM */
 
-/*II.Manejo del DOM */
 /*a)Inicialización página de inicio*/
 document.addEventListener('DOMContentLoaded', () =>{ 
     indexView(); 
@@ -87,9 +97,16 @@ document.getElementsByTagName('a')[0].addEventListener('click', () => {
     indexView();
 })
 
-/*b)Página ¿Qué es Onda Retro? desde el elemento navbar*/
+/*c)Página ¿Qué es Onda Retro? desde el elemento navbar*/
 Array.from(document.getElementsByClassName('aboutshow')).forEach(element=>{
     element.addEventListener('click',()=>{
         aboutView()
+    })
+})
+
+/*d)Página iniciar búsqueda desde el elemento navbar*/
+Array.from(document.getElementsByClassName('searchmovieshow')).forEach(element=>{
+    element.addEventListener('click',()=>{
+        searchView()
     })
 })
