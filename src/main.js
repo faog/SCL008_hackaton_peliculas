@@ -84,31 +84,33 @@ function searchView(){
     `
     <section id="searchview" class="row"> 
         <h3>Iniciar Búsqueda</h3>     
-     <div id="searchbox">
-      <input type="text" id="title">
-      <label>Año de estreno</label>
-        <select id="year" class="browser-default">
-            <option value="all">Seleccione un año</option>
-            <option value="1940">1940</option>
-            <option value="1941">1941</option>
-            <option value="1942">1942</option>
-            <option value="1943">1943</option>
-            <option value="1944">1944</option>
-            <option value="1945">1945</option>
-            <option value="1946">1946</option>
-            <option value="1947">1947</option>
-            <option value="1948">1948</option>
-            <option value="1949">1949</option>
-            <option value="1950">1950</option>
-        </select>
+        <div id="searchbox">
+            <input type="text" id="title">
 
-      <button id="btnsearch">Buscar</button>
+            <label>Año de estreno</label>
+            <select id="year" class="browser-default">
+                <option value="all">Seleccione un año</option>
+                <option value="1940">1940</option>
+                <option value="1941">1941</option>
+                <option value="1942">1942</option>
+                <option value="1943">1943</option>
+                <option value="1944">1944</option>
+                <option value="1945">1945</option>
+                <option value="1946">1946</option>
+                <option value="1947">1947</option>
+                <option value="1948">1948</option>
+                <option value="1949">1949</option>
+                <option value="1950">1950</option>
+            </select>
+            <button id="btnsearch">Buscar</button>
 
-    </div>
+        </div>
     </section> 
-    
+
     <section id="result">
-    </section>`  
+
+    </section>
+    `  
 
 /*Arrow function que permite realizar la busqueda por nombre y año, cuando la persona hace click en el boton*/
 document.getElementById('btnsearch').addEventListener('click',() =>{
@@ -120,8 +122,7 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
             return response.json();
         })
         .then(function(myJson) {
-       movieShow(myJson);
-
+        movieShow(myJson);
     });
 })
 }
@@ -138,7 +139,8 @@ function movieShow (myJson){
             })
             .then(function(element){
             boxMovie +=
-            `<div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
+            `
+            <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
             
                 <img src="${element.Poster}" alt="${element.Title}"/>
                 <p>${element.Title}</p>
@@ -156,14 +158,16 @@ function movieShow (myJson){
                     <p>Genre: ${element.Genre}</p>
                     <p>Plot: ${element.Plot}</p> 
                  </div>
-            </div>`
+            </div>
+            `
 
 
             document.getElementById('result').innerHTML=
-            `<h3>Peliculas encontradas</h3>
-            <section id="moviebox" class="row">
-            ${boxMovie}
-            </section>`
+            `   <h3>Peliculas encontradas</h3>
+                    <section id="moviebox" class="row">
+                        ${boxMovie}
+                    </section>
+            `
 
 
             $('.modal').modal();
