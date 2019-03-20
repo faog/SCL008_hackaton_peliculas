@@ -128,8 +128,51 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
 
 //función para imprimir peliculas buscadas.
 function movieShow (myJson){
-    document.getElementById('result').innerHTML=JSON.stringify(myJson);
+    let dataMovie=myJson.Search;
+    let boxMovie=" ";
+
+        dataMovie.forEach(element=> {
+            fetch(url+"&i="+element.imdbID)
+            .then(function(response){
+            return response.json();
+            })
+            .then(function(element){
+            boxMovie +=
+            `<div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
+            
+                <img src="${element.Poster}" alt="${element.Title}"/>
+                <p>${element.Title}</p>
+                <p>${element.Year}</p>   
+            </div>
+            <div id="modal${element.imdbID}" class="modal">
+                <div class="modal-footer">
+                       <a href="#!" class="modal-close waves-effect btn-flat">X</a>
+                 </div>
+
+                 <div class="modal-content row">
+                    <img src="${element.Poster}" alt="${element.Title}"/>
+                    <p>${element.Title}</p>
+                    <p>${element.Year}</p>   
+                    <p>Genre: ${element.Genre}</p>
+                    <p>Plot: ${element.Plot}</p> 
+                 </div>
+            </div>`
+
+
+            document.getElementById('result').innerHTML=
+            `<h3>Peliculas encontradas</h3>
+            <section id="moviebox" class="row">
+            ${boxMovie}
+            </section>`
+
+
+            $('.modal').modal();
+            
+        })
+    })
+
 }
+
 /*II.MANEJO DEL DOM */
 
 /*a)Inicialización página de inicio*/
