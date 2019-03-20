@@ -128,8 +128,33 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
 
 //función para imprimir peliculas buscadas.
 function movieShow (myJson){
-    document.getElementById('result').innerHTML=JSON.stringify(myJson);
+    let dataMovie=myJson.Search;
+    let boxMovie=" ";
+
+        dataMovie.forEach(element=> {
+            fetch(url+"&i="+element.imdbID)
+            .then(function(response){
+            return response.json();
+            })
+            .then(function(element){
+            boxMovie +=
+            `<p id="${element.imdbID}">${element.imdbID}</p>
+            <img src="${element.Poster}" alt="${element.Title}"/>
+            <p>${element.Title}</p>
+            <p>${element.Year}</p>`
+
+
+            document.getElementById('result').innerHTML=
+            `<h3>Peliculas encontradas</h3>
+            <section id="moviebox" class="row">
+            ${boxMovie}
+            </section>`
+            
+        })
+    })
+
 }
+
 /*II.MANEJO DEL DOM */
 
 /*a)Inicialización página de inicio*/
