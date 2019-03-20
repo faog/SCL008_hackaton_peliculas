@@ -1,3 +1,9 @@
 *{
     font-family: 'Righteous', cursive;
 }
+
+/*Image_modal*/
+#moviebox div img{
+    height: 300px;
+    width: 200px;
+}

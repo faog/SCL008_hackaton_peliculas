@@ -1,8 +1,16 @@
 /*global $*/
 
-/*Contante para obtener las peliculas*/
-const url ="http://www.omdbapi.com/?apikey=4896bf68&type=movie"
+/*Contante para obtener las peliculas desde OMDB*/
+const urlOMDB ="http://www.omdbapi.com/?apikey=4896bf68&type=movie";
 
+/*ApiKey TMdb*/
+const apiTMdb="?api_key=48819a4f88e3d597df63bebab6723d0f";
+
+/*Constante para obtener las peliculas desde TMDb*/
+const urlTMdb ="https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63bebab6723d0f";
+
+/*Constante para obtener el id de una pelicula*/
+const urlID ="https://api.themoviedb.org/3/movie/";
 
 /*I. FUNCIONES*/
 
@@ -101,7 +109,28 @@ function searchView(){
                 <option value="1948">1948</option>
                 <option value="1949">1949</option>
                 <option value="1950">1950</option>
+                <option value="1951">1951</option>
+                <option value="1952">1952</option>
+                <option value="1953">1953</option>
+                <option value="1954">1954</option>
+                <option value="1955">1955</option>
+                <option value="1956">1956</option>
+                <option value="1957">1957</option>
+                <option value="1958">1958</option>
+                <option value="1959">1959</option>
+                <option value="1960">1960</option>
             </select>
+
+            <label>Idioma</label>
+            <select id="language" class="browser-default">
+                <option value="all">Seleccione un idioma</option>
+                <option value="en">Inglés</option>
+                <option value="es">Español</option>
+                <option value="pt-BR">Potugues</option>                
+            </select>
+
+
+
             <button id="btnsearch">Buscar</button>
 
         </div>
@@ -114,10 +143,13 @@ function searchView(){
 
 /*Arrow function que permite realizar la busqueda por nombre y año, cuando la persona hace click en el boton*/
 document.getElementById('btnsearch').addEventListener('click',() =>{
-    let searchTitle ="&s="+document.getElementById('title').value;
-    let searchYear = "&y=" + document.getElementById('year').value;
+    /*let searchTitle ="&s="+document.getElementById('title').value;*/
+    let searchYear = "&primary_release_year=" + document.getElementById('year').value;
+    let searchLanguage = "&language=" + document.getElementById('language').value;
+
+
  
-    fetch(url+searchTitle + searchYear)
+    fetch(urlTMdb/*+searchTitle*/ + searchYear + searchLanguage)
         .then(function(response) {
             return response.json();
         })
@@ -129,34 +161,36 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
 
 //función para imprimir peliculas buscadas.
 function movieShow (myJson){
-    let dataMovie=myJson.Search;
+    let searchLanguage = "&language=" + document.getElementById('language').value;
+    let dataMovie=myJson.results;
     let boxMovie=" ";
 
         dataMovie.forEach(element=> {
-            fetch(url+"&i="+element.imdbID)
+            fetch(urlID+element.id+apiTMdb+searchLanguage)
             .then(function(response){
             return response.json();
             })
             .then(function(element){
+                let poster = "https://image.tmdb.org/t/p/original"+element.poster_path;
+                let genres = element.genres.map((e)=>{return e.name}).join(",");
             boxMovie +=
             `
-            <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
+            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m3 lg3">
             
-                <img src="${element.Poster}" alt="${element.Title}"/>
-                <p>${element.Title}</p>
-                <p>${element.Year}</p>   
+                <img src="${poster}" alt="${element.title}"/>
+                <p>${element.title}</p>                 
             </div>
-            <div id="modal${element.imdbID}" class="modal">
+            <div id="modal${element.id}" class="modal">
                 <div class="modal-footer">
                        <a href="#!" class="modal-close waves-effect btn-flat">X</a>
                  </div>
 
                  <div class="modal-content row">
-                    <img src="${element.Poster}" alt="${element.Title}"/>
-                    <p>${element.Title}</p>
-                    <p>${element.Year}</p>   
-                    <p>Genre: ${element.Genre}</p>
-                    <p>Plot: ${element.Plot}</p> 
+                    <img src="${poster}" alt="${element.title}"/>
+                    <p>${element.title}</p>
+                    <p>${element.release_date}</p>   
+                    <p>Genre: ${genres}</p>
+                    <p>Plot: ${element.overview}</p> 
                  </div>
             </div>
             `
