@@ -1,5 +1,9 @@
 /*global $*/
 
+/*Contante para obtener las peliculas*/
+const url ="http://www.omdbapi.com/?apikey=4896bf68&type=movie&s="
+
+
 /*I. FUNCIONES*/
 
 /*1. Función indexView() que permite imprimir el contenido dinámico de la página de inicio*/
@@ -80,9 +84,30 @@ function searchView(){
     `
     <section id="searchview" class="row"> 
         <h3>Iniciar Búsqueda</h3>     
-        <h4>Página en construcción</h4>
-    </section>             
-    `  
+     <div id="searchbox">
+      <input type="text" id="title">
+
+      <button id="btnsearch">Buscar</button>
+
+    </div>
+    </section> 
+    
+    <section id="result">
+    </section>`  
+
+/*Arrow function que permite realizar la busqueda, cuando la persona hace click en el boton*/
+document.getElementById('btnsearch').addEventListener('click',() =>{
+    let searchTitle =document.getElementById('title').value;
+ 
+    fetch(url+searchTitle)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+        document.getElementById('result').innerHTML=JSON.stringify(myJson);
+
+    });
+})
 }
 
 /*II.MANEJO DEL DOM */
