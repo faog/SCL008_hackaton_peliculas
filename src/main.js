@@ -129,7 +129,27 @@ function searchView(){
                 <option value="pt-BR">Potugues</option>                
             </select>
 
-
+            <label>Genero</label>
+            <select id="genre" class="browser-default">
+                <option value="all">Seleccione un genero</option>
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="35">Comedy</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="10751">Family</option>
+                <option value="10769">Foreign</option>
+                <option value="36">History</option>
+                <option value="27">Horror</option>
+                <option value="10402">Music</option>
+                <option value="9648">Mistery</option>
+                <option value="10749">Romance</option>
+                <option value="878">Science Fiction</option>
+                <option value="10770">TV Movie</option>
+                <option value="53">Thriller</option>
+                <option value="10752">War</option>
+                <option value="37">Western</option>
+            </select>
 
             <button id="btnsearch">Buscar</button>
 
@@ -139,6 +159,8 @@ function searchView(){
     <section id="result">
 
     </section>
+
+
     `  
 
 /*Arrow function que permite realizar la busqueda por nombre y año, cuando la persona hace click en el boton*/
@@ -146,10 +168,11 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
     /*let searchTitle ="&s="+document.getElementById('title').value;*/
     let searchYear = "&primary_release_year=" + document.getElementById('year').value;
     let searchLanguage = "&language=" + document.getElementById('language').value;
+    let searchGenres = "&with_genres=" + document.getElementById('genre').value;
 
 
  
-    fetch(urlTMdb/*+searchTitle*/ + searchYear + searchLanguage)
+    fetch(urlTMdb/*+searchTitle*/ + searchYear + searchLanguage + searchGenres )
         .then(function(response) {
             return response.json();
         })
@@ -172,7 +195,7 @@ function movieShow (myJson){
             })
             .then(function(element){
                 let poster = "https://image.tmdb.org/t/p/original"+element.poster_path;
-                let genres = element.genres.map((e)=>{return e.name}).join(",");
+                let genres = element.genres.map((elemGenres)=>{return elemGenres.name}).join(", ");
             boxMovie +=
             `
             <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m3 lg3">
