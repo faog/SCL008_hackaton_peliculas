@@ -1,7 +1,7 @@
 /*global $*/
 
 /*Contante para obtener las peliculas*/
-const url ="http://www.omdbapi.com/?apikey=4896bf68&type=movie&s="
+const url ="http://www.omdbapi.com/?apikey=4896bf68&type=movie"
 
 
 /*I. FUNCIONES*/
@@ -86,6 +86,21 @@ function searchView(){
         <h3>Iniciar Búsqueda</h3>     
      <div id="searchbox">
       <input type="text" id="title">
+      <label>Año de estreno</label>
+        <select id="year" class="browser-default">
+            <option value="all">Seleccione un año</option>
+            <option value="1940">1940</option>
+            <option value="1941">1941</option>
+            <option value="1942">1942</option>
+            <option value="1943">1943</option>
+            <option value="1944">1944</option>
+            <option value="1945">1945</option>
+            <option value="1946">1946</option>
+            <option value="1947">1947</option>
+            <option value="1948">1948</option>
+            <option value="1949">1949</option>
+            <option value="1950">1950</option>
+        </select>
 
       <button id="btnsearch">Buscar</button>
 
@@ -95,21 +110,26 @@ function searchView(){
     <section id="result">
     </section>`  
 
-/*Arrow function que permite realizar la busqueda, cuando la persona hace click en el boton*/
+/*Arrow function que permite realizar la busqueda por nombre y año, cuando la persona hace click en el boton*/
 document.getElementById('btnsearch').addEventListener('click',() =>{
-    let searchTitle =document.getElementById('title').value;
+    let searchTitle ="&s="+document.getElementById('title').value;
+    let searchYear = "&y=" + document.getElementById('year').value;
  
-    fetch(url+searchTitle)
+    fetch(url+searchTitle + searchYear)
         .then(function(response) {
             return response.json();
         })
         .then(function(myJson) {
-        document.getElementById('result').innerHTML=JSON.stringify(myJson);
+       movieShow(myJson);
 
     });
 })
 }
 
+//función para imprimir peliculas buscadas.
+function movieShow (myJson){
+    document.getElementById('result').innerHTML=JSON.stringify(myJson);
+}
 /*II.MANEJO DEL DOM */
 
 /*a)Inicialización página de inicio*/
