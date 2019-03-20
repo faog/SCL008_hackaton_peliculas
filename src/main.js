@@ -138,10 +138,25 @@ function movieShow (myJson){
             })
             .then(function(element){
             boxMovie +=
-            `<p id="${element.imdbID}">${element.imdbID}</p>
-            <img src="${element.Poster}" alt="${element.Title}"/>
-            <p>${element.Title}</p>
-            <p>${element.Year}</p>`
+            `<div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
+            
+                <img src="${element.Poster}" alt="${element.Title}"/>
+                <p>${element.Title}</p>
+                <p>${element.Year}</p>   
+            </div>
+            <div id="modal${element.imdbID}" class="modal">
+                <div class="modal-footer">
+                       <a href="#!" class="modal-close waves-effect btn-flat">X</a>
+                 </div>
+
+                 <div class="modal-content row">
+                    <img src="${element.Poster}" alt="${element.Title}"/>
+                    <p>${element.Title}</p>
+                    <p>${element.Year}</p>   
+                    <p>Genre: ${element.Genre}</p>
+                    <p>Plot: ${element.Plot}</p> 
+                 </div>
+            </div>`
 
 
             document.getElementById('result').innerHTML=
@@ -149,6 +164,9 @@ function movieShow (myJson){
             <section id="moviebox" class="row">
             ${boxMovie}
             </section>`
+
+
+            $('.modal').modal();
             
         })
     })
