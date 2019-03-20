@@ -169,7 +169,7 @@ function movieShow (myJson){
                     </section>
             `
 
-
+            /*Funcion materiallize modal*/
             $('.modal').modal();
             
         })
