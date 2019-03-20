@@ -7,7 +7,7 @@ const urlOMDB ="http://www.omdbapi.com/?apikey=4896bf68&type=movie";
 const apiTMdb="?api_key=48819a4f88e3d597df63bebab6723d0f";
 
 /*Constante para obtener las peliculas desde TMDb*/
-const urlTMdb ="https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63bebab6723d0f";
+const urlTMdb ="https://api.themoviedb.org/3/discover/movie?api_key=48819a4f88e3d597df63bebab6723d0f&primary_release_date.gte=1940-01-01&primary_release_date.lte=1960-12-31";
 
 /*Constante para obtener el id de una pelicula*/
 const urlID ="https://api.themoviedb.org/3/movie/";
