@@ -1,0 +1,50 @@
+/*selector universal "*"*/
+*{
+    padding: 0px; 
+    margin: 0px auto;
+    font-family: sans-serif;
+}
+/*1)ESTILOS SECCIONES FIJAS*/
+
+/*Footer fijo */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+header, footer, main{
+    margin:0px;
+}
+
+/*a) Estilos barra navegación*/
+nav{
+    background-color:rgba(27, 31, 119, 0.95);
+    position: fixed;
+    z-index: 100;
+    padding: 0px 100px;
+    top: 0px;
+}
+
+#logo{ 
+    height: 60px;   
+    padding-top: 10px;      
+}
+
+/*b) Estilos de Footer*/
+footer{
+    background-color:rgba(27, 31, 119, 0.95);
+    padding: 0px 100px;
+    height: 80px;  
+}
+
+footer p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: left;    
+}
