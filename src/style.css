@@ -15,7 +15,6 @@ body {
 }
 
 main {
-    flex: 1 0 auto;
     background-color: #585858;
 }
 
@@ -139,7 +138,6 @@ main #searchview{
 
 /*Section result*/
 #result{
-    overflow-y: scroll;
     height: 70vh;
     padding: 0px 100px; 
 }
@@ -156,12 +154,15 @@ main #searchview{
     border:white 10px solid;
     border-radius: 10px;
     background-color: #F4F6F7;   
+    width: 300px;
+    height:300px;
+
 }
 
 .movieboxresult img{
     text-align: center;
-    height: 60px;
-    width: 60px;  
+    height: 80%;
+    width: 80%;  
 }
 
 .movieboxresult a{
