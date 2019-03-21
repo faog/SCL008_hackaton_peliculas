@@ -1,104 +1,130 @@
 # ¡Bienvenido a Onda Retro!
 
-<img src="img/Onda_Retro.png" alt = "imagen pantalla principal o logo"/>
+![Página-inicio-OndaRetro](img/Onda_Retro.png)
 
+## ¿Qué es Onda Retro? 
 
-# contenidos
+Esta es una aplicación web centrada en entregar información de películas estrenadas entre los años 1940 y 1960, para un público adulto mayoritariamente de 21 a 40 años, Aquí podrás filtrar por año, género e idioma (español, inglés y portugués). además podrás ver algunas recomendaciones en el extremo inferior de la página; rescatando las películas de antaño, te presentamos Onda Retro.
 
-<ul>
-	<li>Qué es Onda Retro
-	<li>Modo de uso
-	<li>Especificaciones técnicas
-	<li>Testeo (prototipo de baja y alta fidelidad, encuesta)
-	<li>Miembros del equipo
-	<li>Links de interes
-	<li>Historia de usuario
-</ul><br>
-
-## ¿Qué es Onda Retro?
-
-Esta es una interfaz centrada en entregar información de películas estrenadas entre los años 1940 y 1960, para un público adulto mayoritariamente de 21 a 40 años, Aquí podrás filtrar por año, género e idioma (español, inglés y portugués). además podrás ver algunas recomendaciones en el extremo inferior de la página.<br>
-Rescatando las películas de antaño, te presentamos Onda Retro.
-<br>
-## Modo de uso
+### Modo de uso
 
 Para empezar a usar la interfaz, sólo debes clickear el icono central con la frase "realizar busqueda", esta acción te dirigirá a la pantalla dónde se encuentran las opciones de busqueda, puedes filtrar por año, género, y ademáspodrás filtrar por el idioma en el que quieres leer la información (español, inglés y portugués). Aparecerán en pantalla la o las imagenes que coincidan con tu busqueda. Para acceder a la información de la pelicula haz click en la imágen y se desplegará la información adicional.
-<br>
 
-## Especificaciones técnicas
-<br>
-### Organización
+## Planificación 🚀
+
 En la organización utilizamos trello, delimitamos tareas y trabajamos con la metodología "pair programing".
-<br>
-### Metodos utilizados
 
-	-HTML5 para mostrar la página al usuario y unir los script de JavaScript y 
-	-links de CSS, Materialize (incluyendo link al cdn de jquery para usar sus funciones)
-	-Uso de HTML5 dinámico desde el main.js
-	-Manejo del DOM desde main.js
-	-Uso de API OMDB y TMDB.
-	-Manejo de estilos CSS para la página de escritorio y responsivo, usando media 
-	-query para celulares y Tablet.
-	-Trabajo colaborativo mediante el uso de Git y GitHub
+### Definición: ¿Quién es nuestro usuario? 
 
-<br>
-##Historia de usuario
-Queremos dar a conocer al usuario las películas de las quedispone según el año de interés. pensando en que estás películas están casi en el olvido y es poco probable que conozcan los títulos,
-
-## Testeo
-
-### Encuesta
 Antes que nada, fabricamos una encuesta para saber qué tipo de información espera obtener la gente de una interfaz como la nuestra, y aproximar un rango de edad al que dirigirnos.
 
-<img src = "img/grafico_etario.png" alt = "Gráfico de torta, por edades"/><br>
-Viendo que en su mayoría, quienes usan este tipo de páginas son personas de entre 21 a 40 años, desidimos enfocarnos en ese rango etario.
+1. Viendo que en su mayoría, quienes usan este tipo de páginas son personas de entre 21 a 40 años, desidimos enfocarnos en ese rango etario.
 
-<img src = "img/grafico_preferencias_paginas_de_peliculas.png" alt = "Gráfico en barra de intereses informativos de una película"/><br>
-Queríamos enfocarnos en tres filtros, las alternativas eran: título, año, duración, clasificación, género e idioma; y en base a lo que se muestra en el gráfico y nuestro proposito, desidímos hacerlo por género y duración, no descartando las otras posibilidades para el futuro.
+![Gráfico Etario](img/grafico_etario.png)
 
-<img src = "img/grafico_recomendacion_peliculas.png" alt = "Gráfico de torta, espectativas de recomendaciones de películas"/><br>
-Un 98.2% está interesado en obtener recomendaciones dentro de la interfaz.
+2. Queríamos enfocarnos en tres filtros, las alternativas eran: título, año, duración, clasificación, género e idioma; y en base a lo que se muestra en el gráfico y nuestro proposito, desidímos hacerlo por género y duración, no descartando las otras posibilidades para el futuro.
 
-<img src = "img/grafico_reseña.png" alt = "Gráfico de torta, espectativas de reseña"/><br>
-El 86% quiere tener a disposición una reseña de la película.
+![Gráfico Preferencias](img/grafico_preferencias_paginas_de_peliculas.png)
 
-<img src = "img/grafico_puntuacion_pelicula.png" alt = "Gráfico de torta, puntuación de una película"/><br>
-El 71% está interesado en saber la puntuación de las películas.
+3. Un 98.2% está interesado en obtener recomendaciones dentro de la interfaz.
 
-<img src = "img/grafico_otra_informacion.png" alt = "Gráfico en barras, de otros intereses informativos"/><br>
-Esta ultima pregunta, tiene a intención de saber qué podemos implementar más adelante, teniendo como prioridad, información sobre actores y directores de cada película, así como ambién el filtro por títulos.
+![Gráfico Recomendación](img/grafico_recomendacion_peliculas.png)
 
-### Prototipo de baja fidelidad
+4. El 86% quiere tener a disposición una reseña de la película.
 
-Este prototipo se hizo de manera simple pero consisa y entendible.
+![Gráfico Reseña](img/grafico_reseña.png)
 
-<img src = "img/pantallas.png" alt = "Pantalla 1"><br>
+5. El 71% está interesado en saber la puntuación de las películas.
 
-### Prototipo de alta fidelidad
+![Gráfico Puntuación](img/grafico_puntuacion_pelicula.png)
 
-Hecho en Figma.<br>
-<img src = "img/figma.png" alt = "4 pantallas en Figma">
+6. Esta ultima pregunta, tiene a intención de saber qué podemos implementar más adelante, teniendo como prioridad, información sobre actores y directores de cada película, así como ambién el filtro por títulos.
 
-## Miembros del equipo
-<ul>
-	<li> 
-		<strong> Lorena Miranda: </strong>
-		<br>&emsp;
-		Para esta interfaz, Lorena estuvo encargada de los aspectos relacionado con UX, creando en papel el prototipo de alta fidelidad y, en figma, el prototipo de alta fidelidad y testeos en video, usando Loom.
-</ul>
-<ul>
-	<li>
-		<strong> Yaniza Molina, Fabiola Orellana y Paula Sáez: </strong>
-		<br>&emsp; 
-		Creadoras en conjunto de las historias de usuario, generamos filtros, modales e hicimos el readme.
-</ul> 
+![Gráfico Interes](img/grafico_otra_informacion.png)
+ 
+### 1° Fase de Prototipado 📋
+
+Una vez reconocido el usuario, comienza el proceso creativo compuesto por diferentes pasos que buscan dar con un resultado esperado por nosotras, pero principalmente pensado para el usuario. 
+
+* Diagrama de flujo: esquema que grafica el flujo que debería tener la aplicación, considerando cambios de interfaces y filtración de información. 
+
+![Diagrama-de-flujo](image_readme/20190307_153935.jpg)
+
+### Planificación mediante Historias de Usuario ([Trello](https://trello.com/b/P3vXqQyX/hackathon-de-peliculas))
+
+**¿Cuál es la necesidad de nuestro usuario?**
+
+A partir de la encuesta realizada nacen distintas historias de usuario (**HU**)  que describen las necesidades de los usuarios, buscando cubrirlas a partir de los criterios de aceptación (**CA**) que se desarrollan en cada una de ellas.
+
+A medida que se desarrolló Onda Retro se encontraron nuevas HU que permitieron generar una página completa y dinámica. 
 
 
+* AGREGAR HU
 
-## Links de interes
-<ul>
-<li> <strong> Github: </strong>  https://github.com/faog/SCL008_hackaton_peliculas 
-<li> <strong> Figma: </strong>https://www.figma.com/file/YBT047WUrg8QaMZzMMmcMCiT/Hackathon-Onda-Retro?node-id=0%3A1
-<li> <strong> Loom: </strong>
-<li> <strong> Trello: </strong> https://trello.com/b/P3vXqQyX/hackathon-de-peliculas
-</ul>
+Cada HU cuenta con una sección especial que abarca el formato responsivo. Buscamos que Onda Retro pueda ser visualizada desde pantallas de escritorio, Tablet y celular; entendiendo que el usuario utilizará la aplicación de manera transportable, complementando su uso con la app de Pokémon Go. 
+
+### Segunda fase de Prototipado 📄✒️
+
+**- __Prototipo de baja fidelidad__**
+
+A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de lápiz y papel, se creó un boceto con las diferentes interfaces y usos que se proponen para la app web. 
+
+![Pantallas](img/pantallas.png)
+
+**- __Prototipo de alta fidelidad__**
+
+Al reconocer  al usuario se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
+
+![Pantallas](img/figma.png)
+
+Las tareas a realizar fueron:
+
+
+
+* Mejoras a partir del prototipo de alta fidelidad:
+
+
+
+
+
+### Consideraciones en el desarrollo 🛠️
+
+**Ejecución del interfaz de usuario HTML, CSS, JS**
+
+* HTML para mostrar la página al usuario y unir los script de JavaScript y links de CSS, Materialize (incluyendo link al cdn de jquery para usar sus funciones).
+* Uso de HTML dinámico desde el main.js
+* Manejo del DOM desde main.js
+* Desarrollo de funciones de filtrar, ordenar y estadística desde data.js
+* Uso de la data de Pokémon Go a partir de pokemon.json
+* Testeo de funciones desde data.spec.js
+* Manejo de estilos CSS para la página de escritorio y responsivo, usando media query para celulares y Tablet.
+* Trabajo colaborativo mediante el uso de Git y GitHub
+* Deploy con gh-pages de la aplicación [Onda Retro](https://faog.github.io/SCL008_hackaton_peliculas/src/index.html)
+
+**Implementación de las funciones solicitadas**
+
+**Lorena Miranda:** 
+
+Para esta interfaz, Lorena estuvo encargada de los aspectos relacionado con UX, creando en papel el prototipo de alta fidelidad y, en figma, el prototipo de alta fidelidad y testeos en video, usando Loom.
+
+**Yaniza Molina, Fabiola Orellana y Paula Sáez**
+
+Creadoras en conjunto de las historias de usuario, generamos filtros, modales e hicimos el readme.
+
+
+### Futuras mejoras ⌨️
+
+
+
+
+
+
+
+
+### Autoras 📌
+
+**Girls Retro**
+
+8° Generación de Laboratoria.
+
+Marzo, 2019.
