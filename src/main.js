@@ -36,31 +36,27 @@ function indexView(){
         <section class="carousel carousel-slider center">
             <div id="onecarousel" class="carousel-item">
                 <div class="carouselcontent">
-                    <h2>titulo carrusel 1</h2>
-                    <p>Parrafo carrusel 1</p>                    
+                    <h2>¿Quieres ver peliculas retros y no conoces ninguna?</h2>
+                    <p>Junto a Onda Retro podras conocerlas</p>    
+                    <button class="btnstart">Iniciar Búsqueda</button>                
                 </div>
             </div>
             <div id="twocarousel" class="carousel-item">
                 <div class="carouselcontent">
-                <h2>titulo carrusel 2</h2>
-                <p>Parrafo carrusel 2</p>                  
+                <h2>Elige en base a una búsqueda</h2>
+                <p>Podrás encontrar peliculas entre ciertos años y distintos generos.</p> 
+                <button class="btnstart">Iniciar Búsqueda</button>                 
                 </div>
             </div>
             <div id="threecarousel" class="carousel-item">
                 <div class="carouselcontent">
-                    <h2>titulo carrusel 3</h2>
-                    <p>Parrafo carrusel 3</p> 
+                    <h2>Acceso desde cualquier dispositivo</h2>
+                    <p>Busca tus peliculas desde tu notebook o dispositivo móvil</p> 
+                    <button class="btnstart">Iniciar Búsqueda</button>
                 </div>
             </div>
         </section> 
     </section>
-    
-    <button class="btnstart">Iniciar Búsqueda</button>
-
-    <section>
-        <h3>Recomendaciones<h3>    
-    </section>
-
     `
     /*MANEJO DOM PÁGINA INICIO*/
     /*Página Búsqueda Indicadores a partir del elemento button*/  
