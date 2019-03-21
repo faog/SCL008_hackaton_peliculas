@@ -215,9 +215,10 @@ function movieShow (myJson){
                 let genres = element.genres.map((elemGenres)=>{return elemGenres.name}).join(", ");
             boxMovie +=
             `
-            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m6 l3">            
+            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m6 l3 movieboxresult">            
                 <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                 <p>${element.title}</p>                 
+
             </div>
             <div id="modal${element.id}" class="modal">
                 <div class="modal-footer">
