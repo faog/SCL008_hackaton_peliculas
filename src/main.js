@@ -185,7 +185,17 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
 
 /*Funcion para repetir la busqueda pero con la página indicada */
 function showPage(pageNum){
-    alert("Pagina " + pageNum);
+        /*let searchTitle ="&s="+document.getElementById('title').value;*/
+        let searchYear = "&primary_release_year=" + document.getElementById('year').value;
+        let searchLanguage = "&language=" + document.getElementById('language').value;
+        let searchGenres = "&with_genres=" + document.getElementById('genre').value;
+        fetch(urlTMdb/*+searchTitle*/ + searchYear + searchLanguage + searchGenres + "&page=" + pageNum )
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+            movieShow(myJson);
+        });
 }
 
 //función para imprimir peliculas buscadas.
