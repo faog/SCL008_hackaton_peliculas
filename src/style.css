@@ -176,11 +176,9 @@ main #searchview{
     padding-top:60px;      
 }
 
-
-
-
 #searchview h3{
-    font-size:34px;          
+    font-size: 32px;
+    text-transform:uppercase;          
     font-weight: bold;
     
 }
@@ -223,7 +221,8 @@ select.browser-default {
 }
 
 #result h3{       
-    font-size:34px;
+    font-size: 32px;
+    text-transform:uppercase;
 }
 
 #moviebox{
@@ -326,6 +325,10 @@ main #aboutview{
     padding-right:100px;
     margin-bottom: 0px;
     
+}
+
+#instructionone h3{
+    font-size:32px;
 }
 
 #instructionone picture, #instructiontwo picture, #instructionthree picture, #instructionfour picture {

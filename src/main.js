@@ -1,6 +1,6 @@
 /*global $*/
 
-/*Contante para obtener las peliculas desde OMDB*/
+/*Contante para obtener las peliculas desde la OMDB*/
 const urlOMDB ="http://www.omdbapi.com/?apikey=4896bf68&type=movie";
 
 /*ApiKey TMdb*/
@@ -191,9 +191,9 @@ function searchView(){
 
     <section id="result">
 
-    </section>
+    
 
- 
+    </section>
 
     `  
 
@@ -303,6 +303,58 @@ function movieShow (myJson){
         })
     })
 
+}
+
+function movieRecomend(){
+    let dataRecomend=myJson.Search;
+    let boxMovieRecomend="";
+
+    dataRecomend.forEach(element=>{
+        /*Traerse los detalles de la pelicula*/
+        fetch(url+"&i="+element.imdbID)
+        .then(function(response) {
+        return response.json();
+        })
+        .then(function(element) {
+            boxMovieRecomend += `
+            <!--Peliculas recomendadas-->
+        
+            <div id="movieboxresult" class="col s6 m6 l3"> 
+                <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger ">            
+                    <img src="${element.Poster}" alt="${element.Title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
+                    <p>${element.Title}</p>   
+                </div>
+                <div id="modal${element.id}" class="modal">
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect btn-flat">X</a>
+                    </div>
+        
+                    <div class="modal-content row">
+        
+                        <div id="poster" class="col s5 m5 l5">
+                            <img src="${element.Poster}" alt="${element.Title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
+                        </div>
+        
+                        <div id="description"class="col s7 m7 l7">
+                            <h4>${element.Poster}</h4>
+                            <p>${element.Title}</p>   
+                            <p>${element.Year}</p>
+                            <p>Genre: ${element.Genre}</p>
+                            <p>Plot: ${element.Plot}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `  
+
+    document.getElementById('result').innerHTML +=
+    `<h3>Peliculas encontradas</h3>
+    <section id="moviebox" class="row">
+        ${boxMovieRecomend}  
+    </section>`       
+});       
+
+})
 }
 
 /*II.MANEJO DEL DOM */
