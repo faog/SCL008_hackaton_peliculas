@@ -59,7 +59,20 @@ A partir de la encuesta realizada nacen distintas historias de usuario (**HU**) 
 A medida que se desarrolló Onda Retro se encontraron nuevas HU que permitieron generar una página completa y dinámica. 
 
 
-* AGREGAR HU
+1. <strong>HU1:</strong> Yo como amante del cine retro quiero ocupar esta aplicación desde mi computador para poder acceder a la información desde mi hogar.<br> 
+CA: Crear esqueleto de HTML, definiendo las pantallas de la app y sus funcionalidades.<br>
+
+2. <strong>HU2:</strong> Yo como fanático del cine me gustaría poder filtrar las películas por año y así conocer las fechas de lanzamiento.<br>
+CA: Crear una pantalla donde el usuario pueda filtrar por año.<br>
+
+3. <strong>HU3:</strong> Yo como amante del cine me gustaría que me recomendarán películas que hayan sido aclamadas por la critica.<br> 
+CA: Crear una sección en donde se muestren las películas seleccionadas.<br>
+
+4. <strong>HU4:</strong> Yo como aficionado al cine me gustaría poder filtrar por genero y asi poder ver distintas películas.<br> 
+CA: Crear una pantalla donde el usuario pueda filtrar por género de películas.<br>
+
+5. <strong>HU5:</strong> Yo como amante de las buenas películas quiero poder tener acceso a las reseñas en español y así poder elegir las mejores películas de la epoca.<br>
+CA: Crear una pantalla donde el usuario pueda filtrar por el idioma de las reseñas.
 
 Cada HU cuenta con una sección especial que abarca el formato responsivo. Buscamos que Onda Retro pueda ser visualizada desde pantallas de escritorio, Tablet y celular; entendiendo que el usuario utilizará la aplicación de manera transportable, complementando su uso con la app de Pokémon Go. 
 
@@ -83,7 +96,7 @@ Las tareas a realizar fueron:
 
 * Mejoras a partir del prototipo de alta fidelidad:
 
-
+Una vez hecho el prototipo de alta fidelidad y teseado con posibles usuarios, y debido a la buena aceptación en cuanto a diseño y usabilidad, implemetamos la maqueta casi en su totalidad. El único cambio que se le hizo, fue implementar un modal en vez de redirigir a otra pantalla dónde se mostrara la información.
 
 
 
@@ -102,21 +115,16 @@ Las tareas a realizar fueron:
 
 **Lorena Miranda:** 
 
-Para esta interfaz, Lorena estuvo encargada de los aspectos relacionado con UX, creando en papel el prototipo de alta fidelidad y, en figma, el prototipo de alta fidelidad y testeos en video, usando Loom.
+Para esta interfaz, Lorena estuvo encargada de los aspectos relacionado con UX, creando en papel el prototipo de alta fidelidad y, en figma, el prototipo de alta fidelidad, control de flujo y testeos en video, usando Loom.
 
 **Yaniza Molina, Fabiola Orellana y Paula Sáez**
 
-Creadoras en conjunto de las historias de usuario, generamos filtros, modales e hicimos el readme.
+Creadoras en conjunto de las historias de usuario, generamos filtros, modales e hicimos el readme, control de flujo y testeos en video, usando Loom.
 
 
 ### Futuras mejoras ⌨️
 
-
-
-
-
-
-
+En un futuro pensamos agregar busqueda por título, reparto y director, que son los 3 datos que, dentro de lo que no hemos implementado en la interfaz, lideraron las encuestas online hechas a 62 personas.
 
 ### Autoras 📌
 
