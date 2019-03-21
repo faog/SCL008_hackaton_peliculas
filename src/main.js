@@ -168,13 +168,15 @@ function searchView(){
         </div>
     </section> 
 
-    <section id="result" class="row">
+    <section id="result">
 
     </section>
 
  
 
     `  
+
+    $('select').formSelect();
 
 /*Arrow function que permite realizar la busqueda por nombre y año, cuando la persona hace click en el boton*/
 document.getElementById('btnsearch').addEventListener('click',() =>{
@@ -226,25 +228,32 @@ function movieShow (myJson){
                 let genres = element.genres.map((elemGenres)=>{return elemGenres.name}).join(", ");
             boxMovie +=
             `
-            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m6 l3 movieboxresult">            
-                <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
-                <p>${element.title}</p>                 
-
-            </div>
-            <div id="modal${element.id}" class="modal">
-                <div class="modal-footer">
-                       <a href="#!" class="modal-close waves-effect btn-flat">X</a>
-                 </div>
-
-                 <div class="modal-content row">
+            <div id="movieboxresult" class="col s6 m6 l3"> 
+                <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger ">            
                     <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
-                    <p>${element.title}</p>
-                    <p>${element.release_date}</p>   
-                    <p>Genre: ${genres}</p>
-                    <p>Plot: ${element.overview}</p> 
-                 </div>
-            </div>
+                    <p>${element.title}</p>                 
 
+                </div>
+                <div id="modal${element.id}" class="modal">
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect btn-flat">X</a>
+                    </div>
+
+                    <div class="modal-content row">
+                        
+                        <div id="poster" class="col s5 m5 l5">
+                            <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
+                        </div>
+                            
+                        <div id="description"class="col s7 m7 l7">
+                            <h4>${element.title}</h4>
+                            <p>${element.release_date}</p>   
+                            <p>Genre: ${genres}</p>
+                            <p>Plot: ${element.overview}</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
             `
             let paging = `Pagina ${myJson.page} de ${myJson.total_pages}`;
             let classLeft = myJson.page==1?"disabled":"waves-effect";
@@ -254,17 +263,17 @@ function movieShow (myJson){
 
             document.getElementById('result').innerHTML=
             `   <h3>Peliculas encontradas</h3>
-                    <section id="moviebox" class="col s12 m12 l12">
-                        ${boxMovie}
+                    <section id="moviebox" class="row">
+                        ${boxMovie}                        
                     </section>
-
-                <div>
+                <div class="pagination">
                     <ul class="pagination">
                         <li class="${classLeft}"><a href="#!" ${onclickLeft}><i class="material-icons">chevron_left</i></a></li>
                         <li>${paging}</li>
                         <li class="${classRight}"><a href="#!" ${onclickRight}><i class="material-icons">chevron_right</i></a></li>
                     </ul>
                 </div>
+                
             `
 
             /*Funcion materiallize modal*/
