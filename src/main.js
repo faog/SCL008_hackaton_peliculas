@@ -93,7 +93,7 @@ function searchView(){
     <section id="searchview" class="row"> 
         <h3>Iniciar Búsqueda</h3>     
         <div id="searchbox">
-            <input type="text" id="title">
+            <!--<input type="text" id="title">-->
 
             <label>Año de estreno</label>
             <select id="year" class="browser-default">
@@ -160,6 +160,7 @@ function searchView(){
 
     </section>
 
+ 
 
     `  
 
@@ -216,6 +217,7 @@ function movieShow (myJson){
                     <p>Plot: ${element.overview}</p> 
                  </div>
             </div>
+
             `
 
 
@@ -224,6 +226,18 @@ function movieShow (myJson){
                     <section id="moviebox" class="row">
                         ${boxMovie}
                     </section>
+
+                <footer>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+                </footer>
             `
 
             /*Funcion materiallize modal*/
