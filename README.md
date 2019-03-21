@@ -48,7 +48,7 @@ Una vez reconocido el usuario, comienza el proceso creativo compuesto por difere
 
 * Diagrama de flujo: esquema que grafica el flujo que debería tener la aplicación, considerando cambios de interfaces y filtración de información. 
 
-![Diagrama-de-flujo](image_readme/20190307_153935.jpg)
+![Diagrama-de-flujo](img/control_de_flujo.png)
 
 ### Planificación mediante Historias de Usuario ([Trello](https://trello.com/b/P3vXqQyX/hackathon-de-peliculas))
 
@@ -94,14 +94,11 @@ Las tareas a realizar fueron:
 * HTML para mostrar la página al usuario y unir los script de JavaScript y links de CSS, Materialize (incluyendo link al cdn de jquery para usar sus funciones).
 * Uso de HTML dinámico desde el main.js
 * Manejo del DOM desde main.js
-* Desarrollo de funciones de filtrar, ordenar y estadística desde data.js
-* Uso de la data de Pokémon Go a partir de pokemon.json
-* Testeo de funciones desde data.spec.js
 * Manejo de estilos CSS para la página de escritorio y responsivo, usando media query para celulares y Tablet.
 * Trabajo colaborativo mediante el uso de Git y GitHub
 * Deploy con gh-pages de la aplicación [Onda Retro](https://faog.github.io/SCL008_hackaton_peliculas/src/index.html)
 
-**Implementación de las funciones solicitadas**
+**Implementación de la aplicación**
 
 **Lorena Miranda:** 
 
