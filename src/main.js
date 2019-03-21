@@ -36,31 +36,27 @@ function indexView(){
         <section class="carousel carousel-slider center">
             <div id="onecarousel" class="carousel-item">
                 <div class="carouselcontent">
-                    <h2>titulo carrusel 1</h2>
-                    <p>Parrafo carrusel 1</p>                    
+                    <h2>¿Quieres ver peliculas retros y no conoces ninguna?</h2>
+                    <p>Junto a Onda Retro podras conocerlas</p>    
+                    <button class="btnstart">Iniciar Búsqueda</button>                
                 </div>
             </div>
             <div id="twocarousel" class="carousel-item">
                 <div class="carouselcontent">
-                <h2>titulo carrusel 2</h2>
-                <p>Parrafo carrusel 2</p>                  
+                <h2>Elige en base a una búsqueda</h2>
+                <p>Podrás encontrar peliculas entre ciertos años y distintos generos.</p> 
+                <button class="btnstart">Iniciar Búsqueda</button>                 
                 </div>
             </div>
             <div id="threecarousel" class="carousel-item">
                 <div class="carouselcontent">
-                    <h2>titulo carrusel 3</h2>
-                    <p>Parrafo carrusel 3</p> 
+                    <h2>Acceso desde cualquier dispositivo</h2>
+                    <p>Busca tus peliculas desde tu notebook o dispositivo móvil</p> 
+                    <button class="btnstart">Iniciar Búsqueda</button>
                 </div>
             </div>
         </section> 
     </section>
-    
-    <button class="btnstart">Iniciar Búsqueda</button>
-
-    <section>
-        <h3>Recomendaciones<h3>    
-    </section>
-
     `
     /*MANEJO DOM PÁGINA INICIO*/
     /*Página Búsqueda Indicadores a partir del elemento button*/  
@@ -78,8 +74,18 @@ function aboutView(){
 
     `
     <section id="aboutview" class="row"> 
-        <h3>¿Qué es Onda Retro?</h3>     
-        <h4>Página en construcción</h4>
+        <h3>Onda Retro</h3>  
+        <h4>¿Qué es Onda Retro?</h4>   
+        <p>Rescatando las películas de antaño, te presentamos Onda Retro, esta es una aplicación web centrada en entregar información de películas estrenadas entre los años 1940 y 1960. 
+        Aquí podrás filtrar por año, género e idiomas de la reseña. Además podrás ver algunas recomendaciones de las películas más populares, 
+        para esos momentos donde lo único que tienes claro es que quieres ver una película.<br>
+        .</p>
+        <h4>Modo de uso</h4>
+        <p>Para empezar a usar nuestra aplicación web, sólo debes clickear el icono central con la frase "Iniciar búsqueda", 
+        esta acción te dirigirá a la pantalla dónde puedes filtrar por año, género e idioma de la reseña. 
+        Aparecerán en pantalla la o las películas que coincidan con tu búsqueda. Para acceder a la información de la pelicula, 
+        debes clickear sobre la imagen y se desplegará la información adicional.</p>
+
     </section>             
     `  
 }
