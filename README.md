@@ -18,27 +18,27 @@ En la organización utilizamos trello, delimitamos tareas y trabajamos con la me
 
 Antes que nada, fabricamos una encuesta para saber qué tipo de información espera obtener la gente de una interfaz como la nuestra, y aproximar un rango de edad al que dirigirnos.
 
-1. Viendo que en su mayoría, quienes usan este tipo de páginas son personas de entre 21 a 40 años, desidimos enfocarnos en ese rango etario.
+- Viendo que en su mayoría, quienes usan este tipo de páginas son personas de entre 21 a 40 años, desidimos enfocarnos en ese rango etario.
 
 ![Gráfico Etario](img/grafico_etario.png)
 
-2. Queríamos enfocarnos en tres filtros, las alternativas eran: título, año, duración, clasificación, género e idioma; y en base a lo que se muestra en el gráfico y nuestro proposito, desidímos hacerlo por género y duración, no descartando las otras posibilidades para el futuro.
+- Queríamos enfocarnos en tres filtros, las alternativas eran: título, año, duración, clasificación, género e idioma; y en base a lo que se muestra en el gráfico y nuestro proposito, desidímos hacerlo por género y duración, no descartando las otras posibilidades para el futuro.
 
 ![Gráfico Preferencias](img/grafico_preferencias_paginas_de_peliculas.png)
 
-3. Un 98.2% está interesado en obtener recomendaciones dentro de la interfaz.
+-  Un 98.2% está interesado en obtener recomendaciones dentro de la interfaz.
 
 ![Gráfico Recomendación](img/grafico_recomendacion_peliculas.png)
 
-4. El 86% quiere tener a disposición una reseña de la película.
+- El 86% quiere tener a disposición una reseña de la película.
 
 ![Gráfico Reseña](img/grafico_reseña.png)
 
-5. El 71% está interesado en saber la puntuación de las películas.
+-  El 71% está interesado en saber la puntuación de las películas.
 
 ![Gráfico Puntuación](img/grafico_puntuacion_pelicula.png)
 
-6. Esta ultima pregunta, tiene a intención de saber qué podemos implementar más adelante, teniendo como prioridad, información sobre actores y directores de cada película, así como ambién el filtro por títulos.
+- Esta ultima pregunta, tiene a intención de saber qué podemos implementar más adelante, teniendo como prioridad, información sobre actores y directores de cada película, así como ambién el filtro por títulos.
 
 ![Gráfico Interes](img/grafico_otra_informacion.png)
  
@@ -75,7 +75,7 @@ A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de l
 
 Al reconocer  al usuario se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
 
-![Pantallas](img/figma.png)
+![Pantallas](img/Figma.png)
 
 Las tareas a realizar fueron:
 
