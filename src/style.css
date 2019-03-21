@@ -132,29 +132,7 @@ main #onecarousel, #twocarousel, #threecarousel{
     width: 20px;
     height: 20px;
 }
-/*Pagina de búsqueda*/
-main #searchview{
-    background-color:#585858;
-}
 
-main #searchview{
-    padding-top:60px;
-    color:#212F3C;  
-}
-
-#searchview h3{
-    font-size:34px; 
-    color:#212F3C; 
-    padding-left: 100px;
-    font-weight: bold;
-}
-
-#title{
-    font-size:18px;   
-    color:#212F3C;
-    margin-top: 50px;
-    padding-left:100px;
-}
 
 .btnstart{
     width: 190px;
@@ -167,7 +145,6 @@ main #searchview{
     cursor: pointer;
     border-radius: 10px;
     font-family: 'Righteous', cursive;
-
 }
 
 .btnstart:hover{
@@ -185,7 +162,33 @@ main #searchview{
     height: 600px;
 }
 
-/*Section result*/
+/*PÁGINA DE BÚSQUEDA*/
+#searchview{
+    padding: 0px 100px; 
+}
+
+main #searchview{
+    background-color:#585858;
+}
+
+main #searchview{
+    padding-top:60px;      
+}
+
+#searchview h3{
+    font-size:34px;          
+    font-weight: bold;
+    
+}
+
+#title{
+    font-size:18px;    
+    margin-top: 50px;
+    padding-left:100px;
+}
+
+
+
 #result{
     height: 70vh;
     padding: 0px 100px; 
@@ -219,6 +222,7 @@ main #searchview{
     color:#212F3C;   
 }
 
+*/
 /*Modal*/
 
 .modal .modal-footer{
@@ -267,8 +271,6 @@ main #searchview{
         padding-top: 40px;
     }
 
-    .searchview h3 {
-       padding-left: 50px;
-    }
+  
 }
 

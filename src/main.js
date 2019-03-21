@@ -96,69 +96,74 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
 
     `
-    <section id="searchview" class="row"> 
+    <section id="searchview"> 
         <h3>Iniciar Búsqueda</h3>     
-        <div id="searchbox">
+        <div id="searchbox" class="row">
             <!--<input type="text" id="title">-->
+            <div class="col s12 m12 l3">
+                <label>Año de estreno</label>
+                <select id="year" class="browser-default">
+                    <option value="">Seleccione un año</option>
+                    <option value="1940">1940</option>
+                    <option value="1941">1941</option>
+                    <option value="1942">1942</option>
+                    <option value="1943">1943</option>
+                    <option value="1944">1944</option>
+                    <option value="1945">1945</option>
+                    <option value="1946">1946</option>
+                    <option value="1947">1947</option>
+                    <option value="1948">1948</option>
+                    <option value="1949">1949</option>
+                    <option value="1950">1950</option>
+                    <option value="1951">1951</option>
+                    <option value="1952">1952</option>
+                    <option value="1953">1953</option>
+                    <option value="1954">1954</option>
+                    <option value="1955">1955</option>
+                    <option value="1956">1956</option>
+                    <option value="1957">1957</option>
+                    <option value="1958">1958</option>
+                    <option value="1959">1959</option>
+                    <option value="1960">1960</option>
+                </select>
+            </div>
 
-            <label>Año de estreno</label>
-            <select id="year" class="browser-default">
-                <option value="">Seleccione un año</option>
-                <option value="1940">1940</option>
-                <option value="1941">1941</option>
-                <option value="1942">1942</option>
-                <option value="1943">1943</option>
-                <option value="1944">1944</option>
-                <option value="1945">1945</option>
-                <option value="1946">1946</option>
-                <option value="1947">1947</option>
-                <option value="1948">1948</option>
-                <option value="1949">1949</option>
-                <option value="1950">1950</option>
-                <option value="1951">1951</option>
-                <option value="1952">1952</option>
-                <option value="1953">1953</option>
-                <option value="1954">1954</option>
-                <option value="1955">1955</option>
-                <option value="1956">1956</option>
-                <option value="1957">1957</option>
-                <option value="1958">1958</option>
-                <option value="1959">1959</option>
-                <option value="1960">1960</option>
-            </select>
+            <div class="col s12 m12 l3">
+                <label>Idioma</label>
+                <select id="language" class="browser-default">
+                    <option value="">Seleccione un idioma</option>
+                    <option value="en">Inglés</option>
+                    <option value="es">Español</option>
+                    <option value="pt-BR">Potugues</option>                
+                </select>
+            </div>
 
-            <label>Idioma</label>
-            <select id="language" class="browser-default">
-                <option value="">Seleccione un idioma</option>
-                <option value="en">Inglés</option>
-                <option value="es">Español</option>
-                <option value="pt-BR">Potugues</option>                
-            </select>
+            <div class="col s12 m12 l3">
+                <label >Genero</label>
+                <select id="genre" class="browser-default">
+                    <option value="">Seleccione un genero</option>
+                    <option value="28">Action</option>
+                    <option value="12">Adventure</option>
+                    <option value="16">Animation</option>
+                    <option value="35">Comedy</option>
+                    <option value="99">Documentary</option>
+                    <option value="18">Drama</option>
+                    <option value="10751">Family</option>
+                    <option value="10769">Foreign</option>
+                    <option value="36">History</option>
+                    <option value="27">Horror</option>
+                    <option value="10402">Music</option>
+                    <option value="9648">Mistery</option>
+                    <option value="10749">Romance</option>
+                    <option value="878">Science Fiction</option>
+                    <option value="10770">TV Movie</option>
+                    <option value="53">Thriller</option>
+                    <option value="10752">War</option>
+                    <option value="37">Western</option>
+                </select>
+            </div>
 
-            <label>Genero</label>
-            <select id="genre" class="browser-default">
-                <option value="">Seleccione un genero</option>
-                <option value="28">Action</option>
-                <option value="12">Adventure</option>
-                <option value="16">Animation</option>
-                <option value="35">Comedy</option>
-                <option value="99">Documentary</option>
-                <option value="18">Drama</option>
-                <option value="10751">Family</option>
-                <option value="10769">Foreign</option>
-                <option value="36">History</option>
-                <option value="27">Horror</option>
-                <option value="10402">Music</option>
-                <option value="9648">Mistery</option>
-                <option value="10749">Romance</option>
-                <option value="878">Science Fiction</option>
-                <option value="10770">TV Movie</option>
-                <option value="53">Thriller</option>
-                <option value="10752">War</option>
-                <option value="37">Western</option>
-            </select>
-
-            <button id="btnsearch">Buscar</button>
+            <button id="btnsearch" class="col s12 m12 l3">Buscar</button>
 
         </div>
     </section> 
@@ -253,13 +258,13 @@ function movieShow (myJson){
                         ${boxMovie}
                     </section>
 
-                <footer>
+                <div>
                     <ul class="pagination">
                         <li class="${classLeft}"><a href="#!" ${onclickLeft}><i class="material-icons">chevron_left</i></a></li>
                         <li>${paging}</li>
                         <li class="${classRight}"><a href="#!" ${onclickRight}><i class="material-icons">chevron_right</i></a></li>
                     </ul>
-                </footer>
+                </div>
             `
 
             /*Funcion materiallize modal*/
