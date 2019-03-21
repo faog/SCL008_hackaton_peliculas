@@ -37,7 +37,7 @@ function indexView(){
             <div id="onecarousel" class="carousel-item">
                 <div class="carouselcontent">
                     <h2>¿Quieres ver peliculas retros y no conoces ninguna?</h2>
-                    <p>Junto a Onda Retro podras conocerlas</p>    
+                    <p>Junto a Onda Retro podrás conocerlas</p>    
                     <button class="btnstart">Iniciar Búsqueda</button>                
                 </div>
             </div>

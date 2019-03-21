@@ -378,3 +378,80 @@ main #aboutview{
     text-align:center;
 }
 
+
+/*Dispositivo Movil (Celular)*/
+/*a) Responsivo html fijo */
+
+@media (max-width: 992px){
+    
+    nav{
+        height: 180px;
+    }
+
+    #logo{ 
+        height: 130px;   
+        display: block; 
+        margin-top: 20px; 
+    }
+
+    nav i.material-icons{
+        font-size:100px;
+        margin-top: 65px;
+        color: black;
+    }
+
+    .sidenav{
+        width: 700px;
+    }
+    .sidenav li a{
+        font-size:40px;
+        margin-top:50px;     
+    }
+
+    footer{
+        padding: 0px 100px;
+        height: 100px;  
+    }    
+
+    footer p{
+        padding-top: 10px;
+        font-size: 26px;
+        text-align: left;    
+    }
+      
+}
+
+/*b) Responsivo html dinámico página de inicio */
+
+@media (max-width: 992px){
+    
+
+    .carousel.carousel-slider .carousel-item h2{  
+        font-size: 56px;   
+        line-height:100px; 
+        
+    }
+    
+    .carousel.carousel-slider .carousel-item p{     
+        padding-top:50px;          
+        font-size: 48px;           
+    }
+
+
+    main #welcomeimage{
+        height: 1400px;
+    }   
+    
+    .carouselcontent {
+        height:800px;
+    }
+   
+    .btnstart{
+        width: 400px;
+        height: 90px;
+        font-size: 48px;  
+        margin-top:50px;
+    }
+}
+
+
