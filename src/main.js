@@ -73,20 +73,41 @@ function aboutView(){
     document.getElementById('dinamicpage').innerHTML += 
 
     `
-    <section id="aboutview" class="row"> 
-        <h3>Onda Retro</h3>  
-        <h4>¿Qué es Onda Retro?</h4>   
-        <p>Rescatando las películas de antaño, te presentamos Onda Retro, esta es una aplicación web centrada en entregar información de películas estrenadas entre los años 1940 y 1960. 
-        Aquí podrás filtrar por año, género e idiomas de la reseña. Además podrás ver algunas recomendaciones de las películas más populares, 
-        para esos momentos donde lo único que tienes claro es que quieres ver una película.<br>
-        .</p>
-        <h4>Modo de uso</h4>
-        <p>Para empezar a usar nuestra aplicación web, sólo debes clickear el icono central con la frase "Iniciar búsqueda", 
-        esta acción te dirigirá a la pantalla dónde puedes filtrar por año, género e idioma de la reseña. 
-        Aparecerán en pantalla la o las películas que coincidan con tu búsqueda. Para acceder a la información de la pelicula, 
-        debes clickear sobre la imagen y se desplegará la información adicional.</p>
+    <section id="aboutview" class="row">         
+        <h3>¿Qué es Onda Retro?</h3> 
+            <article class = "col s12 m12 l8">  
+                <p>Rescatando las películas de antaño, te presentamos Onda Retro, esta es una aplicación web centrada en entregar información de películas estrenadas entre los años 1940 y 1960. 
+                    Aquí podrás filtrar por año, género e idiomas de la reseña.</p>
+            </article>
+            <picture  id="imagevhs" class="col s12 m12 l4">
+                <img src="Image/vhs.png"  alt="vhs"/>        
+            </picture> 
+    </section>      
 
-    </section>             
+    <article id="instructionone" class="row"> 
+        <h3>Modo de uso</h3>     
+        <h4>Para empezar a usar nuestra aplicación web, sólo debes ingresar a la opción "Iniciar búsqueda" y seguir los siguientes pasos:</h4> 
+        <h4 class="col s12 m12 l6">Seleccionar una opción de filtro. Esta puede ser por año, género e idioma de la reseña</h4>
+        <picture class="col s12 m12 l6">
+            <img src="Image/tutorial001.png" id="tutorialsearchone" alt="Página de búsqueda"/>        
+        </picture>
+    </article>
+
+    <article id="instructiontwo" class="row">  
+        <h4 class="col s12 m12 l6">Aparecerán en pantalla la o las películas que coincidan con tu búsqueda.</h4>
+        <picture class="col s12 m12 l6">
+            <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Página de búsqueda"/>        
+        </picture>
+    </article>
+
+    <article id="instructionthree" class="row">
+        <h4 class="col s12 m12 l6">Para acceder a la información de la pelicula, 
+        debes clickear sobre la imagen y se desplegará la información adicional.</h4>
+        <picture class="col s12 m12 l6">
+            <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="resaltar país"/>        
+        </picture>
+    </article> 
+                 
     `  
 }
 

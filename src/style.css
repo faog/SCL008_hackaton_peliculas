@@ -286,3 +286,92 @@ select.browser-default {
     text-align: center;
     height:50px;
 }
+
+/*¿Qué es onda retro?*/
+
+main #aboutview{
+    color:black;  
+    padding: 100px 100px;
+    background-color: #FF8D07;
+    margin-bottom: 0px; 
+}
+
+#aboutview h3{
+    margin-top:0px;
+    font-weight: bold;   
+    font-size: 32px;
+    text-transform:uppercase;
+    color:black;
+}
+
+#imagevhs{   
+    text-align: center;    
+}
+#imagevhs img{
+    height: 200px;
+    width: 250px;      
+}
+
+#aboutview p{
+    font-size: 22px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#instructionone{
+    padding-top:20px;
+    background-color: #99A3A4  ; 
+    height:550px;
+    padding-left:100px; 
+    padding-right:100px;
+    margin-bottom: 0px;
+    
+}
+
+#instructionone picture, #instructiontwo picture, #instructionthree picture, #instructionfour picture {
+    text-align:center;
+}
+
+#instructionone h4{
+    margin-top: 50px;
+    font-size:22px;
+    line-height:40px; 
+ 
+}
+
+#instructiontwo{
+    background-color: #D5DBDB  ; 
+    height:340px;
+    padding-left:100px;
+    padding-right:100px;
+    margin-bottom: 0px;
+}
+
+#instructiontwo h4{
+    margin-top: 100px;
+    font-size:22px;
+    line-height:40px; 
+ 
+}
+
+#instructionthree{
+    background-color: #EBF5FB; 
+    height:340px;
+    padding-left:100px;
+    padding-right:100px;
+    margin-bottom: 0px;
+}
+
+#instructionthree h4{
+    margin-top: 100px;
+    font-size:22px;
+    line-height:40px;  
+}
+
+#tutorialsearchone,#tutorialsearchtwo,#tutorialsearchthree {
+    height: 300px;
+    width: 90%;
+    padding-top:30px;
+    text-align:center;
+}
+
