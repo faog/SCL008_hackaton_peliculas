@@ -156,7 +156,7 @@ function searchView(){
         </div>
     </section> 
 
-    <section id="result">
+    <section id="result" class="row">
 
     </section>
 
@@ -214,8 +214,7 @@ function movieShow (myJson){
                 let genres = element.genres.map((elemGenres)=>{return elemGenres.name}).join(", ");
             boxMovie +=
             `
-            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m3 lg3">
-            
+            <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m6 l3">            
                 <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                 <p>${element.title}</p>                 
             </div>
@@ -242,7 +241,7 @@ function movieShow (myJson){
 
             document.getElementById('result').innerHTML=
             `   <h3>Peliculas encontradas</h3>
-                    <section id="moviebox" class="row">
+                    <section id="moviebox" class="col s12 m12 l12">
                         ${boxMovie}
                     </section>
 
