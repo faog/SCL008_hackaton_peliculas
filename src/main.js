@@ -134,6 +134,7 @@ function searchView(){
                 <option value="">Seleccione un genero</option>
                 <option value="28">Action</option>
                 <option value="12">Adventure</option>
+                <option value="16">Animation</option>
                 <option value="35">Comedy</option>
                 <option value="99">Documentary</option>
                 <option value="18">Drama</option>
