@@ -1,3 +1,223 @@
+/*selector universal "*"*/
 *{
+    padding: 0px; 
+    margin: 0px auto;
     font-family: 'Righteous', cursive;
 }
+/*1)ESTILOS SECCIONES FIJAS*/
+
+/*Footer fijo */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: #585858;
+}
+
+header, footer, main{
+    margin:0px;
+}
+
+/*a) Estilos barra navegación*/
+nav{
+    background-color:#FF8D07;
+    position: fixed;
+    z-index: 100;
+    padding: 0px 100px;
+    top: 0px;
+}
+
+.aboutshow, .searchmovieshow{
+    color: #191919;
+}
+
+#logo{ 
+    height: 60px;   
+    padding-top: 10px;      
+}
+
+/*b) Estilos de Footer*/
+footer{
+    background-color:#FF8D07;
+    padding: 0px 100px;
+    height: 80px;  
+}
+
+footer p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: #191919;
+    text-align: left;    
+}
+
+/*2)ESTILOS SECCIONES DINÁMICAS*/
+
+/*a)Página de inicio*/
+
+main #onecarousel{
+    margin-top:50px;
+    position: relative;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    opacity: 0.8;  
+    background-color: #FFFFFF;
+    background-image: url(Image/carrusel1.png)
+    
+}
+
+.carouselcontent h2{   
+    margin-top:0px;
+    padding-top:150px; 
+    font-weight: bold;   
+    font-size: 36px;
+    text-align: center;      
+    color: #FFFFFF;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1); 
+}
+
+#carouselcontent h3{     
+    font-size: 28px;
+    text-align: center;     
+    color: #FFFFFF;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);      
+}
+
+/*Pagina de búsqueda*/
+main #searchview{
+    background-color:#585858;
+}
+
+main #searchview{
+    padding-top:60px;
+    color:#212F3C;  
+}
+
+#searchview h3{
+    font-size:34px; 
+    color:#212F3C; 
+    padding-left: 100px;
+    font-weight: bold;
+}
+
+#title{
+    font-size:18px;   
+    color:#212F3C;
+    margin-top: 50px;
+    padding-left:100px;
+}
+
+.btnstart{
+    width: 190px;
+    height: 45px;
+    margin: 30px 100px;
+    background: rgba(77, 77, 77, 0.8);
+    border: 1px solid rgba(77, 77, 77, 0.8) ;  
+    color: white;
+    font-size: 18px;  
+    cursor: pointer;
+}
+
+.btnstart:hover{
+    background: rgba(27, 31, 119);
+    border: 1px solid rgba(27, 31, 119);     
+    font-weight: bold;  
+}
+
+
+#staticstype{
+    margin:0px;
+    width: 100%;
+    translate:0px; 
+    height: 600px;
+}
+
+/*Section result*/
+#result{
+    overflow-y: scroll;
+    height: 70vh;
+    padding: 0px 100px; 
+}
+
+#result h3{
+    margin-left:20px; 
+    text-align: center;
+    margin-top:7px; 
+}
+
+.movieboxresult{
+    padding-top:20px;
+    text-align: center;
+    border:white 10px solid;
+    border-radius: 10px;
+    background-color: #F4F6F7;   
+}
+
+.movieboxresult img{
+    text-align: center;
+    height: 60px;
+    width: 60px;  
+}
+
+.movieboxresult a{
+    font-size:18px;
+    color:#212F3C;   
+}
+
+/*Modal*/
+
+.modal .modal-footer{
+    height: 0px;
+    background-color:#D4E6F1;
+}
+
+.modal{
+    height: 450px;
+    width: 400px;
+    overflow: hidden;
+    max-height: 90%;
+    background:linear-gradient(180deg,#D4E6F1, #F7F9F9);
+    align-content: center;
+}
+
+.modal.open{
+    border-radius: 20px;
+}
+
+/*Dispositivo Tablet*/
+/*a) Responsivo html fijo */
+
+/*Responsivo página ¿Qué es PokeChoose?*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+        
+}
+
+/*Responsivo Página búsqueda*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+    .movieboxresult {
+        padding: 0px 100px;
+        padding-left:50px;
+        height: 80vh; 
+    }
+
+    #moviebox {
+       border: white 5px solid;
+      
+    }
+
+    .searchview {
+        margin-top: 0px;
+        padding-top: 40px;
+    }
+
+    .searchview h3 {
+       padding-left: 50px;
+    }
+}
+

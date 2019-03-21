@@ -140,7 +140,7 @@ function movieShow (myJson){
             .then(function(element){
             boxMovie +=
             `
-            <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3">
+            <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger col s12 m6 lg3 movieboxresult">
             
                 <img src="${element.Poster}" alt="${element.Title}"/>
                 <p>${element.Title}</p>
