@@ -216,7 +216,7 @@ function movieShow (myJson){
             `
             <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger col s6 m3 lg3">
             
-                <img src="${poster}" alt="${element.title}"/>
+                <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                 <p>${element.title}</p>                 
             </div>
             <div id="modal${element.id}" class="modal">
@@ -225,7 +225,7 @@ function movieShow (myJson){
                  </div>
 
                  <div class="modal-content row">
-                    <img src="${poster}" alt="${element.title}"/>
+                    <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                     <p>${element.title}</p>
                     <p>${element.release_date}</p>   
                     <p>Genre: ${genres}</p>
