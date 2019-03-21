@@ -78,8 +78,18 @@ function aboutView(){
 
     `
     <section id="aboutview" class="row"> 
-        <h3>¿Qué es Onda Retro?</h3>     
-        <h4>Página en construcción</h4>
+        <h3>Onda Retro</h3>  
+        <h4>¿Qué es Onda Retro?</h4>   
+        <p>Rescatando las películas de antaño, te presentamos Onda Retro, esta es una aplicación web centrada en entregar información de películas estrenadas entre los años 1940 y 1960. 
+        Aquí podrás filtrar por año, género e idiomas de la reseña. Además podrás ver algunas recomendaciones de las películas más populares, 
+        para esos momentos donde lo único que tienes claro es que quieres ver una película.<br>
+        .</p>
+        <h4>Modo de uso</h4>
+        <p>Para empezar a usar nuestra aplicación web, sólo debes clickear el icono central con la frase "Iniciar búsqueda", 
+        esta acción te dirigirá a la pantalla dónde puedes filtrar por año, género e idioma de la reseña. 
+        Aparecerán en pantalla la o las películas que coincidan con tu búsqueda. Para acceder a la información de la pelicula, 
+        debes clickear sobre la imagen y se desplegará la información adicional.</p>
+
     </section>             
     `  
 }
