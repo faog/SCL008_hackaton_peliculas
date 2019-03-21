@@ -97,7 +97,7 @@ function searchView(){
 
             <label>Año de estreno</label>
             <select id="year" class="browser-default">
-                <option value="all">Seleccione un año</option>
+                <option value="">Seleccione un año</option>
                 <option value="1940">1940</option>
                 <option value="1941">1941</option>
                 <option value="1942">1942</option>
@@ -123,7 +123,7 @@ function searchView(){
 
             <label>Idioma</label>
             <select id="language" class="browser-default">
-                <option value="all">Seleccione un idioma</option>
+                <option value="">Seleccione un idioma</option>
                 <option value="en">Inglés</option>
                 <option value="es">Español</option>
                 <option value="pt-BR">Potugues</option>                
@@ -131,7 +131,7 @@ function searchView(){
 
             <label>Genero</label>
             <select id="genre" class="browser-default">
-                <option value="all">Seleccione un genero</option>
+                <option value="">Seleccione un genero</option>
                 <option value="28">Action</option>
                 <option value="12">Adventure</option>
                 <option value="35">Comedy</option>
@@ -183,6 +183,11 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
 })
 }
 
+/*Funcion para repetir la busqueda pero con la página indicada */
+function showPage(pageNum){
+    alert("Pagina " + pageNum);
+}
+
 //función para imprimir peliculas buscadas.
 function movieShow (myJson){
     let searchLanguage = "&language=" + document.getElementById('language').value;
@@ -219,7 +224,11 @@ function movieShow (myJson){
             </div>
 
             `
-
+            let paging = `Pagina ${myJson.page} de ${myJson.total_pages}`;
+            let classLeft = myJson.page==1?"disabled":"waves-effect";
+            let classRight = myJson.page==myJson.total_pages?"disabled":"waves-effect";
+            let onclickLeft = myJson.page==1?"":`onclick="showPage(${myJson.page-1})"`;
+            let onclickRight = myJson.page==myJson.total_pages?"":`onclick="showPage(${myJson.page+1})"`;
 
             document.getElementById('result').innerHTML=
             `   <h3>Peliculas encontradas</h3>
@@ -229,13 +238,9 @@ function movieShow (myJson){
 
                 <footer>
                     <ul class="pagination">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                        <li class="active"><a href="#!">1</a></li>
-                        <li class="waves-effect"><a href="#!">2</a></li>
-                        <li class="waves-effect"><a href="#!">3</a></li>
-                        <li class="waves-effect"><a href="#!">4</a></li>
-                        <li class="waves-effect"><a href="#!">5</a></li>
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                        <li class="${classLeft}"><a href="#!" ${onclickLeft}><i class="material-icons">chevron_left</i></a></li>
+                        <li>${paging}</li>
+                        <li class="${classRight}"><a href="#!" ${onclickRight}><i class="material-icons">chevron_right</i></a></li>
                     </ul>
                 </footer>
             `
