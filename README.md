@@ -13,32 +13,35 @@
 	<li>Miembros del equipo
 	<li>Links de interes
 	<li>Historia de usuario
-</ul>
+</ul><br>
 
 ## ¿Qué es Onda Retro?
 
 Esta es una interfaz centrada en entregar información de películas estrenadas entre los años 1940 y 1960, para un público adulto mayoritariamente de 21 a 40 años, Aquí podrás filtrar por año, género e idioma (español, inglés y portugués). además podrás ver algunas recomendaciones en el extremo inferior de la página.<br>
 Rescatando las películas de antaño, te presentamos Onda Retro.
-
+<br>
 ## Modo de uso
 
-Para empezar a usar la interfaz, sólo debes clickear el icono central con la frase "realizar busqueda", esta acción te dirigirá a la pantalla dónde se encuentran las opciones de busqueda, puedes filtrar por año, género, y además podrás filtrar por el idioma en el que quieres leer la información (español, inglés y portugués). Aparecerán en pantalla la o las imagenes que coincidan con tu busqueda. Para acceder a la información de la pelicula haz click en la imágen y se desplegará la información adicional.
+Para empezar a usar la interfaz, sólo debes clickear el icono central con la frase "realizar busqueda", esta acción te dirigirá a la pantalla dónde se encuentran las opciones de busqueda, puedes filtrar por año, género, y ademáspodrás filtrar por el idioma en el que quieres leer la información (español, inglés y portugués). Aparecerán en pantalla la o las imagenes que coincidan con tu busqueda. Para acceder a la información de la pelicula haz click en la imágen y se desplegará la información adicional.
+<br>
 
 ## Especificaciones técnicas
-
+<br>
 ### Organización
 En la organización utilizamos trello, delimitamos tareas y trabajamos con la metodología "pair programing".
-
+<br>
 ### Metodos utilizados
-<ul>
-<li>HTML5 para mostrar la página al usuario y unir los script de JavaScript y <li>links de CSS, Materialize (incluyendo link al cdn de jquery para usar sus funciones)
-<li>Uso de HTML5 dinámico desde el main.js
-<li>Manejo del DOM desde main.js
-<li>Uso de API OMDB y TMDB.
-<li>Manejo de estilos CSS para la página de escritorio y responsivo, usando media <li>query para celulares y Tablet.
-<li>Trabajo colaborativo mediante el uso de Git y GitHub
-</ul>
 
+	-HTML5 para mostrar la página al usuario y unir los script de JavaScript y 
+	-links de CSS, Materialize (incluyendo link al cdn de jquery para usar sus funciones)
+	-Uso de HTML5 dinámico desde el main.js
+	-Manejo del DOM desde main.js
+	-Uso de API OMDB y TMDB.
+	-Manejo de estilos CSS para la página de escritorio y responsivo, usando media 
+	-query para celulares y Tablet.
+	-Trabajo colaborativo mediante el uso de Git y GitHub
+
+<br>
 ##Historia de usuario
 Queremos dar a conocer al usuario las películas de las quedispone según el año de interés. pensando en que estás películas están casi en el olvido y es poco probable que conozcan los títulos,
 
