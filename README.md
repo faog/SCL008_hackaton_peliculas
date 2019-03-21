@@ -75,7 +75,7 @@ A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de l
 
 Al reconocer  al usuario se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
 
-![Pantallas](img/Figma.png)
+![Pantallas](img/Figma.jpg)
 
 Las tareas a realizar fueron:
 
