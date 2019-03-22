@@ -121,10 +121,10 @@ function searchView(){
         <h3>Iniciar Búsqueda</h3>     
         <div id="searchbox" class="row">
             <!--<input type="text" id="title">-->
-            <div class="col s12 m12 l3">
-                <label>Año de estreno</label>
+            <div class="col s12 m12 l3 xl3">
+                
                 <select id="year" class="browser-default">
-                    <option value="">Seleccione un año</option>
+                    <option value="">Seleccione un año de estreno</option>
                     <option value="1940">1940</option>
                     <option value="1941">1941</option>
                     <option value="1942">1942</option>
@@ -149,8 +149,7 @@ function searchView(){
                 </select>
             </div>
 
-            <div class="col s12 m12 l3">
-                <label>Idioma</label>
+            <div class="col s12 m12 l3 xl3">
                 <select id="language" class="browser-default">
                     <option value="">Seleccione un idioma</option>
                     <option value="en">Inglés</option>
@@ -159,8 +158,7 @@ function searchView(){
                 </select>
             </div>
 
-            <div class="col s12 m12 l3">
-                <label >Genero</label>
+            <div class="col s12 m12 l3 xl3">
                 <select id="genre" class="browser-default">
                     <option value="">Seleccione un genero</option>
                     <option value="28">Action</option>
@@ -184,7 +182,7 @@ function searchView(){
                 </select>
             </div>
 
-            <button id="btnsearch" class="col s12 m12 l3">Buscar</button>
+            <button id="btnsearch" class="col s12 m12 l3 xl3">Buscar</button>
 
         </div>
     </section> 
@@ -205,8 +203,6 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
     let searchYear = "&primary_release_year=" + document.getElementById('year').value;
     let searchLanguage = "&language=" + document.getElementById('language').value;
     let searchGenres = "&with_genres=" + document.getElementById('genre').value;
-
-
  
     fetch(urlTMdb/*+searchTitle*/ + searchYear + searchLanguage + searchGenres )
         .then(function(response) {
@@ -216,6 +212,7 @@ document.getElementById('btnsearch').addEventListener('click',() =>{
         movieShow(myJson);
     });
 })
+movieRecomend();
 }
 
 /*Funcion para repetir la busqueda pero con la página indicada */
@@ -249,19 +246,17 @@ function movieShow (myJson){
                 let genres = element.genres.map((elemGenres)=>{return elemGenres.name}).join(", ");
             boxMovie +=
             `
-            <div id="movieboxresult" class="col s6 m6 l3"> 
+            <div id="movieboxresult" class="col s6 m6 l3 xl3"> 
                 <div id="${element.id}" data-target="modal${element.id}" class="modal-trigger ">            
                     <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
-                    <p>${element.title}</p>                 
-
+                    <p>${element.title}</p>  
                 </div>
                 <div id="modal${element.id}" class="modal">
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect btn-flat">X</a>
                     </div>
 
-                    <div class="modal-content row">
-                        
+                    <div class="modal-content row">                        
                         <div id="poster" class="col s5 m5 l5">
                             <img src="${poster}" alt="${element.title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                         </div>
@@ -276,9 +271,7 @@ function movieShow (myJson){
                 </div>
             </div>
             `
-            let paging = `Pagina ${myJson.page} de ${myJson.total_pages}`;
-            let classLeft = myJson.page==1?"disabled":"waves-effect";
-            let classRight = myJson.page==myJson.total_pages?"disabled":"waves-effect";
+            let paging = `Pagina ${myJson.page} de ${myJson.total_pages}`;           
             let onclickLeft = myJson.page==1?"":`onclick="showPage(${myJson.page-1})"`;
             let onclickRight = myJson.page==myJson.total_pages?"":`onclick="showPage(${myJson.page+1})"`;
 
@@ -289,12 +282,11 @@ function movieShow (myJson){
                     </section>
                 <div class="pagination">
                     <ul class="pagination">
-                        <li class="${classLeft}"><a href="#!" ${onclickLeft}><i class="material-icons">chevron_left</i></a></li>
+                        <li><a href="#!" ${onclickLeft}><i class="material-icons chevron" >chevron_left</i></a></li>
                         <li>${paging}</li>
-                        <li class="${classRight}"><a href="#!" ${onclickRight}><i class="material-icons">chevron_right</i></a></li>
+                        <li><a href="#!" ${onclickRight}><i class="material-icons chevron">chevron_right</i></a></li>
                     </ul>
-                </div>
-                
+                </div>                
             `
 
             /*Funcion materiallize modal*/
@@ -306,25 +298,28 @@ function movieShow (myJson){
 }
 
 function movieRecomend(){
-    let dataRecomend=myJson.Search;
-    let boxMovieRecomend="";
+    let dataRecomend=["tt0034583","tt0054215","tt0033467","tt0043274","tt0034492","tt0052618","tt0032910","tt0049223"];
+    document.getElementById('result').innerHTML +=
+    `<h3>Peliculas recomendadas</h3>
+    <section id="moviebox" class="row">
+    </section>`  
 
-    dataRecomend.forEach(element=>{
+    dataRecomend.forEach(movieElement=>{
         /*Traerse los detalles de la pelicula*/
-        fetch(url+"&i="+element.imdbID)
+        fetch(urlOMDB+"&i="+movieElement)
         .then(function(response) {
         return response.json();
         })
         .then(function(element) {
-            boxMovieRecomend += `
+            document.getElementById('moviebox').innerHTML += `
             <!--Peliculas recomendadas-->
         
-            <div id="movieboxresult" class="col s6 m6 l3"> 
+            <div id="movieboxresult" class="col s6 m6 l3 xl3"> 
                 <div id="${element.imdbID}" data-target="modal${element.imdbID}" class="modal-trigger ">            
                     <img src="${element.Poster}" alt="${element.Title}" onerror="this.onerror=null;this.src='Image/notavail.jpg';"/>
                     <p>${element.Title}</p>   
                 </div>
-                <div id="modal${element.id}" class="modal">
+                <div id="modal${element.imdbID}" class="modal">
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect btn-flat">X</a>
                     </div>
@@ -336,8 +331,7 @@ function movieRecomend(){
                         </div>
         
                         <div id="description"class="col s7 m7 l7">
-                            <h4>${element.Poster}</h4>
-                            <p>${element.Title}</p>   
+                            <h4>${element.Title}</h4>   
                             <p>${element.Year}</p>
                             <p>Genre: ${element.Genre}</p>
                             <p>Plot: ${element.Plot}</p>
@@ -346,15 +340,9 @@ function movieRecomend(){
                 </div>
             </div>
             `  
-
-    document.getElementById('result').innerHTML +=
-    `<h3>Peliculas encontradas</h3>
-    <section id="moviebox" class="row">
-        ${boxMovieRecomend}  
-    </section>`       
-});       
-
-})
+            $('.modal').modal();
+        });       
+        });
 }
 
 /*II.MANEJO DEL DOM */
