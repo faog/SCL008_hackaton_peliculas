@@ -16,7 +16,7 @@ Para empezar a usar la interfaz, sólo debes clickear el icono central con la fr
 
 ## Planificación 🚀
 
-En la organización utilizamos trello, delimitamos tareas y trabajamos con la metodología "pair programing".
+En la organización utilizamos [trello](https://trello.com/b/P3vXqQyX/onda-retro), delimitamos tareas y trabajamos con la metodología "pair programing".
 
 ### Definición: ¿Quién es nuestro usuario? 
 
@@ -99,7 +99,7 @@ A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de l
 
 **- __Prototipo de alta fidelidad__**
 
-Al reconocer  al usuario se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
+Al reconocer  al usuario se creó en [Figma](https://www.figma.com/file/YBT047WUrg8QaMZzMMmcMCiT/Hackathon-Onda-Retro?node-id=0%3A1) el prottipo de alta fidelidad y se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
 
 ![Pantallas](img/Figma.jpg)
 
@@ -120,6 +120,8 @@ Las tareas a realizar fueron:
 [Video 2 prototipo alta fidelidad](https://www.useloom.com/share/9657f2f35bff481fa5911206925a21dc)  
 
 [Video 3 prototipo alta fidelidad](https://www.useloom.com/share/6efcf8e239944482a33c76253ab88425)  
+
+[Video 4 prototipo alta fidelidad](https://www.useloom.com/share/4bbe970d3a9448bfbd197a48c5d7094a)
 
 * Mejoras a partir del prototipo de alta fidelidad:
 
