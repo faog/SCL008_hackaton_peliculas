@@ -1,7 +1,7 @@
 /*global $*/
 
 /*Contante para obtener las peliculas desde la OMDB*/
-const urlOMDB ="http://www.omdbapi.com/?apikey=4896bf68&type=movie";
+const urlOMDB ="https://www.omdbapi.com/?apikey=4896bf68&type=movie";
 
 /*ApiKey TMdb*/
 const apiTMdb="?api_key=48819a4f88e3d597df63bebab6723d0f";
