@@ -75,7 +75,7 @@ A medida que se desarrolló Onda Retro se encontraron nuevas HU que permitieron 
 
 **CA**: Crear una sección en donde se muestren las películas seleccionadas.
 
-4. **HU4**: Yo como aficionado al cine me gustaría poder filtrar por genero y asi poder ver distintas películas.
+4. **HU4**: Yo como aficionado al cine me gustaría poder filtrar por género y asi poder ver distintas películas.
 
 **CA**: Crear un selector donde el usuario pueda filtrar por género de películas.
 
