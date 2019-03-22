@@ -90,13 +90,21 @@ Al reconocer  al usuario se definió los colores,  el tipo de información y su 
 
 ![Pantallas](img/Figma.jpg)
 
-Las tareas a realizar fueron:
+Las tareas a realizar fue:
+
+- Buscar la película "Desayuno con diamantes del año 1961".
+- Se capaz de moverse entre las distintas pantallas de la aplicación.
 
 
 
 * Mejoras a partir del prototipo de alta fidelidad:
 
-Una vez hecho el prototipo de alta fidelidad y teseado con posibles usuarios, y debido a la buena aceptación en cuanto a diseño y usabilidad, implemetamos la maqueta casi en su totalidad. El único cambio que se le hizo, fue implementar un modal en vez de redirigir a otra pantalla dónde se mostrara la información.
+Una vez hecho el prototipo de alta fidelidad y teseado con posibles usuarios, y debido a la buena aceptación en cuanto a diseño y usabilidad, implemetamos la maqueta casi en su totalidad. Los cambios realizados fueron:
+
+- Implementar un modal en vez de redirigir a otra pantalla dónde se mostrara la información. 
+- Sacar las peliculas recomendadas de la página de inicio y colocarlas en la búsqueda.
+
+
 
 
 
@@ -120,7 +128,6 @@ Para esta interfaz, Lorena estuvo encargada de los aspectos relacionado con UX, 
 **Yaniza Molina, Fabiola Orellana y Paula Sáez**
 
 Creadoras en conjunto de las historias de usuario, generamos filtros, modales e hicimos el readme, control de flujo y testeos en video, usando Loom.
-
 
 ### Futuras mejoras ⌨️
 
