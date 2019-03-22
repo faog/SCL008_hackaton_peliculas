@@ -44,7 +44,7 @@ function indexView(){
             <div id="twocarousel" class="carousel-item">
                 <div class="carouselcontent">
                 <h2>Elige en base a una búsqueda</h2>
-                <p>Podrás encontrar peliculas entre ciertos años y distintos generos.</p> 
+                <p>Podrás encontrar peliculas entre ciertos años y distintos géneros</p> 
                 <button class="btnstart">Iniciar Búsqueda</button>                 
                 </div>
             </div>
@@ -160,7 +160,7 @@ function searchView(){
 
             <div class="col s12 m12 l3 xl3">
                 <select id="genre" class="browser-default">
-                    <option value="">Seleccione un genero</option>
+                    <option value="">Seleccione un género</option>
                     <option value="28">Action</option>
                     <option value="12">Adventure</option>
                     <option value="16">Animation</option>
