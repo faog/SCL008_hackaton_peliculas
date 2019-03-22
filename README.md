@@ -99,7 +99,7 @@ A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de l
 
 **- __Prototipo de alta fidelidad__**
 
-Al reconocer  al usuario se creó en [Figma](https://www.figma.com/file/YBT047WUrg8QaMZzMMmcMCiT/Hackathon-Onda-Retro?node-id=0%3A1) el prottipo de alta fidelidad y se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
+Al reconocer  al usuario se creó en [Figma](https://www.figma.com/file/YBT047WUrg8QaMZzMMmcMCiT/Hackathon-Onda-Retro?node-id=0%3A1) el prototipo de alta fidelidad y se definió los colores,  el tipo de información y su distribución a desplegarse en la app web. A partir del prototipo de baja fidelidad se realizaron algunos ajustes en cuanto a la presentación de la página principal, tutorial y de búsqueda. 
 
 ![Pantallas](img/Figma.jpg)
 
